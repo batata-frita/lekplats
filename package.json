@@ -28,7 +28,13 @@
     "sagui": "^8.0.2"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "html2react": "^1.0.2",
+    "lodash.merge": "^4.6.0",
+    "patch-react-proptypes-add-introspection": "^0.1.0",
+    "ramda": "^0.23.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-frame-component": "^1.0.0"
   }
 }
