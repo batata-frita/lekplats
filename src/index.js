@@ -1,17 +1,20 @@
 import React from 'react'
 import { render } from 'react-dom'
 import Lekplats from './Lekplats'
-
-function Demo () {
-  return <h2>Demo</h2>
-}
+import Demo from './Demo'
 
 render(
   <Lekplats components={{
     Demo: {
       Component: Demo,
       fixtures: {
-        default: {}
+        default: {
+          name: {
+            first: 'Sven',
+            last: 'Svensson'
+          },
+          rolling: false
+        }
       }
     }
   }} />,

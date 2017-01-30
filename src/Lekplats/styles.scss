@@ -1,5 +1,5 @@
 :global(body) {
-  font-family: 'Open Sans';
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
 }
 
@@ -125,7 +125,6 @@
   color: black;
   color: white;
   cursor: pointer;
-  font-family: 'Open Sans', serif;
   font-size: 12px;
   font-weight: 300;
   padding: 15px 20px;
@@ -245,7 +244,6 @@
 
 .fixtureEditorGroupTitle {
   -webkit-font-smoothing: antialiased;
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 26px;
   font-weight: 400;
   text-rendering: geometricPrecision;

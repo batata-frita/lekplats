@@ -3,12 +3,9 @@ import Frame from 'react-frame-component'
 import HTML2React from 'html2react'
 import classNamesBind from 'classnames/bind'
 import merge from 'lodash.merge'
+import FixtureEditor from './FixtureEditor'
 import devices from './devices'
 import styles from './styles.scss'
-
-function FixtureEditor () {
-  return false
-}
 
 const classNames = classNamesBind.bind(styles)
 
