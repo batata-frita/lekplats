@@ -2,7 +2,7 @@
   "name": "lekplats",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/Lekplats/index.js",
   "scripts": {
     "build": "sagui build",
     "dist": "sagui dist",
