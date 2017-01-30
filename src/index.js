@@ -8,12 +8,19 @@ render(
     Demo: {
       Component: Demo,
       fixtures: {
-        default: {
+        'Swedish citizen': {
           name: {
             first: 'Sven',
             last: 'Svensson'
           },
           rolling: false
+        },
+        'Rolling Brasilian citizen': {
+          name: {
+            first: 'João',
+            last: 'Silva'
+          },
+          rolling: true
         }
       }
     }
