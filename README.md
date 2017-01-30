@@ -1,4 +1,4 @@
-# Lekplats
+# <img src='./logo.png' height='128px' title='Lekplats' />
 
 Npm package to render a playground of React components.
 
