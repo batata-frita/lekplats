@@ -251,7 +251,7 @@ class Lekplats extends React.Component {
     const fixtureMods = JSON.parse(decodeURIComponent(this.state.params.fixtureMods || '{}'))
     const fixture = merge(
       {},
-      fixtures[componentName] ? fixtures[componentName][fixtureName] : {},
+      fixtures[componentName] ? fixtures[componentName][decodeURIComponent(fixtureName)] : {},
       fixtureMods
     )
     return (
