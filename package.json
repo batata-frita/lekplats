@@ -1,7 +1,7 @@
 {
   "name": "lekplats",
   "version": "0.2.3",
-  "description": "React Component playground",
+  "description": "The simplest way to render a playground of React components",
   "main": "index.js",
   "files": [
     "dist"
@@ -19,15 +19,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klarna/lekplats.git"
+    "url": "git+https://github.com/batata-frita/lekplats.git"
   },
   "keywords": [],
   "author": "",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/klarna/lekplats/issues"
+    "url": "https://github.com/batata-frita/lekplats/issues"
   },
-  "homepage": "https://github.com/klarna/lekplats#readme",
+  "homepage": "https://github.com/batata-frita/lekplats#readme",
   "devDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

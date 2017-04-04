@@ -1,4 +1,4 @@
-# <img src='./logo.png' title='Lekplats' />
+# <img src='https://github.com/batata-frita/lekplats/raw/master/logo.png' title='Lekplats' />
 
 Npm package to render a playground of React components.
 
