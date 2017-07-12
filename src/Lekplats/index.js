@@ -8,6 +8,7 @@ import devices from './devices'
 import styles from './styles.scss'
 
 const classNames = classNamesBind.bind(styles)
+let fixtureID = null
 
 function getQueryParameters (href) {
   const paramsStr = href ? href.split(/\?(.+)?/)[1] : ''
@@ -90,7 +91,7 @@ function renderDeviceDropdown (devices, deviceName, onChange) {
   )
 }
 
-function renderFixturesList (componentName, fixtures, params, handleLinkClick) {
+function renderFixturesList (componentName, fixtures, params, handleFixtureLinkClick) {
   return (
     <ul className={styles.fixturesList}>
       {Object.keys(fixtures).map((key, j) => {
@@ -113,7 +114,7 @@ function renderFixturesList (componentName, fixtures, params, handleLinkClick) {
             <a
               className={linkClassName}
               href={href}
-              onClick={handleLinkClick}>
+              onClick={handleFixtureLinkClick}>
               {key}
             </a>
           </li>
@@ -123,7 +124,7 @@ function renderFixturesList (componentName, fixtures, params, handleLinkClick) {
   )
 }
 
-function renderFixtures (fixtures, params, handleLinkClick) {
+function renderFixtures (fixtures, params, handleFixtureLinkClick) {
   return (
     <ul className={styles.componentsList}>
       {Object.keys(fixtures).map((key, i) => {
@@ -140,7 +141,7 @@ function renderFixtures (fixtures, params, handleLinkClick) {
                 key,
                 fixtures[key],
                 params,
-                handleLinkClick
+                handleFixtureLinkClick
               )
             )}
           </li>
@@ -163,12 +164,12 @@ function renderComponent (deviceWidth, deviceHeight, params, Component, fixture)
       {deviceWidth && (
         <Frame head={HTML2React(document.head.innerHTML)}>
           <div style={{ padding: '20px' }}>
-            <Component {...fixture} />
+            <Component {...fixture} key={fixtureID} />
           </div>
         </Frame>
         )}
       {!deviceWidth && (
-        <Component {...fixture} />
+        <Component {...fixture} key={fixtureID} />
       )}
     </div>
   )
@@ -178,7 +179,7 @@ class Lekplats extends React.Component {
   constructor (props) {
     super(props)
     this.handlePopState = this.handlePopState.bind(this)
-    this.handleLinkClick = this.handleLinkClick.bind(this)
+    this.handleFixtureLinkClick = this.handleFixtureLinkClick.bind(this)
     this.handleDeviceChange = this.handleDeviceChange.bind(this)
     this.handleFixtureChange = this.handleFixtureChange.bind(this)
     this.toggleFullscreenMode = this.toggleFullscreenMode.bind(this)
@@ -270,7 +271,7 @@ class Lekplats extends React.Component {
           {renderFixtures(
             fixtures,
             this.state.params,
-            this.handleLinkClick
+            this.handleFixtureLinkClick
           )}
         </div>
         {Component && <FixtureEditor
@@ -351,10 +352,12 @@ class Lekplats extends React.Component {
       fixtureMods: encodeURIComponent(JSON.stringify(mergedFixtureMods))
     })
   }
-  handleLinkClick (e) {
+  handleFixtureLinkClick (e) {
     e.preventDefault()
+    const queryParameters = getQueryParameters(e.target.href)
+    fixtureID = `${queryParameters.component}-${queryParameters.fixture}`
     this.updateParams({
-      ...getQueryParameters(e.target.href),
+      ...queryParameters,
       fixtureMods: null
     })
   }
