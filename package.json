@@ -29,20 +29,21 @@
   },
   "homepage": "https://github.com/batata-frita/lekplats#readme",
   "devDependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "sagui": "^8.0.2"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0",
-    "react-dom": "^0.14.0 || ^15.0.0"
+    "react": "^15.4.2 || ^16.0.0",
+    "react-dom": "^15.4.2 || ^16.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "html2react": "^1.0.2",
+    "html2react": "^1.2.1",
     "lodash.merge": "^4.6.0",
-    "patch-react-proptypes-add-introspection": "^0.1.0",
+    "patch-react-proptypes-add-introspection": "^1.0.0",
+    "prop-types": "^15.6.0",
     "ramda": "^0.23.0",
-    "react-frame-component": "^1.0.0"
+    "react-frame-component": "^2.0.0"
   }
 }
