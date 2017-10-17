@@ -1,5 +1,7 @@
 # <img src='https://github.com/batata-frita/lekplats/raw/master/logo.png' title='Lekplats' />
 
+[![Build Status](https://travis-ci.org/batata-frita/lekplats.svg)](https://travis-ci.org/batata-frita/lekplats) [![npm version](https://badge.fury.io/js/lekplats.svg)](https://badge.fury.io/js/lekplats)
+
 Npm package to render a playground of React components.
 
 ## Usage
