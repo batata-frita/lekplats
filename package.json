@@ -3,7 +3,9 @@
   "version": "0.3.1",
   "description": "The simplest way to render a playground of React components",
   "main": "index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "sagui build",
     "dist": "sagui dist",
@@ -37,9 +39,9 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "html2react": "^1.0.2",
+    "html2react": "^1.2.1",
     "lodash.merge": "^4.6.0",
-    "patch-react-proptypes-add-introspection": "^0.1.0",
+    "patch-react-proptypes-add-introspection": "^1.0.0",
     "prop-types": "^15.6.0",
     "ramda": "^0.23.0",
     "react-frame-component": "^2.0.0"
