@@ -6,7 +6,7 @@ import view from 'ramda/src/view'
 import styles from './styles.scss'
 
 export default function FixtureEditor ({ Component, fixture, onFixtureChange }) {
-  const propTypes = introspect(Component.propTypes || {})
+  const propTypes = Component.properTypes || introspect(Component.propTypes || {})
   const flattenedPropTypes = flattenPropTypes(propTypes)
   const groupedPropTypes = groupPropTypes(flattenedPropTypes)
   return (
