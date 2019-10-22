@@ -47,7 +47,11 @@
     #f9f9f9 75%,
     #f9f9f9 100%
   );
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // transition: width 0s ease-out, left 0s ease-out;
 
   .is-fullscreen & {
@@ -74,14 +78,12 @@
   width: 100%;
   box-sizing: border-box;
   position: relative;
+  display: inline-block;
 
   & > iframe {
     width: 100%;
     height: 100%;
     border: 0;
-    position: absolute;
-    top: -50%;
-    left: -50%;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
     background-color: white;
@@ -97,15 +99,11 @@
     pointer-events: none;
     display: none;
     -webkit-font-smoothing: antialiased;
-    top: calc(50% + 10px);
-    left: 0;
+    margin-top: 5px;
   }
 
   .is-simulating-device & {
     padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     max-width: 100%;
 
     &:after {
