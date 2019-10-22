@@ -1,6 +1,6 @@
 {
   "name": "lekplats",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "The simplest way to render a playground of React components",
   "main": "index.js",
   "files": [
